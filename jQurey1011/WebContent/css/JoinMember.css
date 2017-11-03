@@ -1,0 +1,152 @@
+		/* @import url('https://fonts.googleapis.com/css?family=Wendy+One'); */
+		@import url(http://fonts.googleapis.com/earlyaccess/jejuhallasan.css);
+		body, ul {
+			margin: 0px;
+			padding: 0px;
+		}
+		
+		#header {
+			width: 100%;
+			height: 50px;
+			background-color: #fab1ce;
+		}
+		
+		#header_inner{
+			float: right;
+			margin-right: 20px;
+		}
+		
+		
+		#header_ul{
+			list-style-type: none;
+		}
+		
+		
+		.header_li{
+			font-family: 'Jeju Hallasan', serif;
+			text-align: center;
+			float: left;
+			/*padding: 0px 20px;*/
+			color: white;
+			width: 110px;
+			position: relative;
+		}
+		.header_li:HOVER{
+			background-color: 	#f349eb;	
+		}
+		
+		.header_li:HOVER .header_dropdown{
+			display: block;
+		}
+		
+
+		.header_a{
+			color: white;
+			text-decoration: none;
+			line-height: 50px;
+		}
+		
+		.header_dropdown {
+			box-sizing: border-box;
+			width: 110px;
+			padding: 10px 0px;
+			font-size: 14px;
+			background-color: #f349eb;
+			position: absolute;
+			display: none;
+		}
+		
+		.dropdown_a {
+			color: white;
+			text-decoration: none;
+			text-align: left;
+			margin-bottom: 5px;
+			margin-left: 3px;
+			width: 100px;
+			display: block;
+		}
+		.dropdown_a:hover{
+			/* background-color: #f349eb; */
+			color:white;
+			text-decoration: underline;
+			font-weight: bold;
+		}
+		
+		#bookmark{
+			color: white;
+			line-height: 50px;
+			font-size: 13px;
+			font-weight: bold;
+			margin-left: 20px;
+			text-align: center;
+		}
+	
+		#nav {
+			width: 100%;
+			height: 50px;
+			background-color: black;
+		}
+		
+		#nav_ul{
+			list-style-type:  none;
+		}
+		
+		.nav_li{
+			float: left;
+			font-family: 'Jeju Hallasan', serif;
+			color: white;
+			width: 100px;
+			text-align: center;
+		}
+		
+		.nav_li:HOVER {
+			background-color: white;
+			position: relative;
+		}
+		
+		.nav_li:hover .nav_dropdown{
+			display: block;
+			z-index:1;
+		}
+		
+		.nav_li:HOVER .nav_a {
+			color : #00b9f1;
+		}
+		
+		.nav_a{
+			color: white;
+			text-decoration: none;
+			line-height: 50px;
+		}
+		
+		.nav_dropdown_a{
+			display: block;
+			font-family: 'Jeju Hallasan', serif;
+			color: black;
+			text-decoration: none;
+			font-size: 12px;
+			padding : 5px 0px;
+		}
+		
+		.nav_dropdown {
+			position: absolute;
+			box-sizing: border-box;
+			width : 100px;
+			display: none;
+		}
+		
+		.nav_dropdown_a:hover{
+			background-color: #A593E0;
+			color:#a5dff9;
+		}
+		
+		#img_section {
+			display: block;
+			height: 600px;
+		}
+		
+		#button_div{
+			display: block;
+			text-align: center;
+			height: 20px;
+		}

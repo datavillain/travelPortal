@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jqevent.html</title>
+	<style type="text/css">
+		body * {
+			margin: 5px;
+			padding: 5px;
+			border : solid thin gray.
+		}
+		div {
+			width: 20px;
+			height: 20px;
+			border: solid thick green;
+		}
+		input {
+			background-color: silver;
+		}
+		span {
+			border: 0px;
+		}
+		p {
+			text-align: center;
+			line-height: 50px;
+			height: 50px;
+			border: solid thin black;
+		}
+		
+	 	#weather_mes {
+			border: solid thick #a5dff9;
+		} 
+		
+	</style>
+	
+	<script src="js/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("input").focus(function(){
+				$(this).css("background-color","orange");
+				$("#msg").empty();
+			});
+			$("input").blur(function(){
+				$(this).css("background-color","white");
+				var str = "사용 가능한 ID 입니다.";
+				$("#msg").empty().append(str).css("color","red");
+			});
+			var temp ="0";
+			$("div").click(function(){
+				if(temp == "0"){
+					$(this).width($(this).width()*5);
+					$(this).height($(this).height()*5);
+					temp = "1";
+				} else if (temp =="1"){
+					$(this).width($(this).width()/5);
+					$(this).height($(this).height()/5);
+					temp = "0";	}
+			});
+/* 			var temp1 ="0";
+			$("img").click(function(){
+				if(temp1 == "0") {
+					$(this).css("opacity","0.3");
+					temp1 = "1.0";
+				}else if(temp1 == "1.0"){
+					$(this).css("opacity","1.0");
+					temp1 = "0";
+				}
+			});  */
+			var temp2 ="0";
+			$("p").click(function(){
+				if(temp == "0"){
+					$(this).empty().append("You just activated my trap card.");
+					$(this).css("color","green");
+					$(this).css("border-color","blue");
+					temp = "1";
+				}else if(temp =="1"){
+					$(this).empty().append("click me.");
+					$(this).css("color","black");
+					$(this).css("border-color","black");
+					temp = "0";
+				}
+			});
+			var firstImg = $("#position");
+			var temp3 = "0";
+			firstImg.click(function(){
+					if(temp3 == "0"){
+					firstImg.attr("src","img/devil.JPG");
+					temp3 ="1";
+				} else if(temp3 == "1"){
+					firstImg.attr("src","img/justice.JPG");
+					temp3 ="0";
+				}
+			}); 
+			
+			var am = $("#weather");
+			var temp4 = "0";
+			am.click(function(){
+				if(temp4 == "0"){
+					am.attr("src","img/sunset.jpg");
+					temp4 ="1";
+				}else if(temp4 == "1"){
+					am.attr("src","img/night.jpg");
+					temp4 = "2";
+				}else if(temp4 == "2"){
+					am.attr("src","img/cloud.jpg");
+					temp4 ="0";
+				}
+				
+			});
+			
+		});
+	
+	
+	
+	</script>
+	
+</head>
+<body>
+	focus/blur 이벤트<br>
+	<input type="text" name="text1" value ="입력하세요."><span id ="msg"></span><br>
+	click 이벤트 <div></div>
+	toggle 이벤트 <br>
+	
+	<img alt="배경이미지" src="img/cloud.jpg" id = "weather">
+	<p>click me.</p>
+	<img alt="배경이미지" src="img/justice.JPG" id = "position">
+	
+</body>
+</html>

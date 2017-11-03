@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입</title>
+<link href="css/JoinMember.css" rel="stylesheet" >
+	<style type="text/css">
+	
+		#join_header {
+			display: block;
+			height: 130px;
+			border-bottom: solid thin red;
+		}
+		
+		#main_container{
+			width: 680px;
+			margin: 0 auto;
+			height: 400px;
+		}
+		
+		#main_container input {
+			text-align: center;
+		}
+		
+		
+		#join_mass {
+			width: 680px;
+			height: 130px;
+			text-align: left;
+			line-height: 130px;
+			margin-bottom: 5px;
+			text-align: center;
+		}
+		
+		#join_mass span {
+			font-family: 'Jeju Hallasan', serif;
+			font-size: 40px;
+			line-height: 130px;
+			text-align: center;
+		}
+		
+		
+		#input_id {
+			width: 680px;
+			height: 130px;
+		}
+		
+		#input_id input{
+			border-color: #45d9fd;
+		}
+		
+		#input_user input{
+			border-color: #45d9fd;
+		}
+		
+		#input_user {
+			width: 680px;
+			height: 130px;
+		}
+		
+		
+		#input_id label {
+			display: inline-block;
+			font-family: 'Jeju Hallasan', serif;
+			margin-bottom: 15px;
+			width: 130px;
+		}
+		
+		#input_user label {
+			display: inline-block;
+			font-family: 'Jeju Hallasan', serif;
+			margin-bottom: 15px;
+			width: 130px;
+		}
+		
+		#input_button {
+			width: 680px;
+			height: 80px;
+			text-align: center;
+			line-height: 80px;
+		}
+		
+		#input_button input {
+			font-family: 'Jeju Hallasan', serif;
+			width: 120px;
+			height: 40px;
+			line-height: 80px;
+		}
+		
+		#footer  * {
+			font-family: 'Jeju Hallasan', serif;
+			font-size: 12px;
+			line-height: normal;
+			list-style: none;
+			color:#8C8C8C;
+			text-decoration: none;
+		}
+		#footer> ul{
+			margin: 0 auto 9px;
+			text-align: center;
+		}
+		#footer > ul > li:first-child{
+			border-left:0px!important;
+		}
+		
+		#footer> ul >li	{
+			display: inline;
+			padding: 0 5px 0 7px;
+			border-left: 1px solid #dadada;
+		}
+		
+	</style>
+
+	
+	<script src="js/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+			$("input").focus(function(){
+				$(this).css("border-color","#0080ff");
+			});
+			$("input").blur(function(){
+				$(this).css("border-color","#45d9fd");
+			});
+			
+			
+			$("#id_in").focus(function(){
+				$("#id_error").empty();
+			});
+			$("#id_in").blur(function(){
+				var str = " ID를 입력해주세요 ☆";
+				$("#id_error").empty().append(str).css("color","red");
+			});
+			
+			
+			$("#pw_ch").focus(function(){
+				$("#pw_error").empty();
+			});
+			$("#pw_ch").blur(function(){
+				var str = " PW가 다릅니다 ☆";
+				$("#pw_error").empty().append(str).css("color","red");
+			});
+			
+		});
+	
+	
+	
+	</script>
+</head>
+<body>
+	<header>
+		<div id ="join_header">
+			<div id = "header">
+				<span id ="bookmark">BOOKMARK + </span>
+	
+		<!--로그인 , 회원가입 등등 div-->
+					<div id = "header_inner">
+						<ul id = "header_ul">
+							<li class = "header_li"><a href = "#" class = "header_a">로그인</a></li>
+							<li class = "header_li"><a href = "#" class = "header_a">회원가입</a></li>
+							<li class = "header_li"><a href = "#" class = "header_a">마이페이지▽</a>
+								<div class = "header_dropdown">
+									<a class = "dropdown_a" href="#">내정보</a>
+									<a class = "dropdown_a" href="#">장바구니</a>
+									<a class = "dropdown_a" href="#">주문/배송 조회</a>
+									<a class = "dropdown_a" href="#">위시리스트</a>
+									<a class = "dropdown_a" href="#">쿠폰조회</a>
+								</div>
+							</li>
+							<li class = "header_li"><a href = "#" class = "header_a">고객센터</a></li>
+						</ul>
+						</div>
+			</div>
+
+	<!-- 메인 로고 -->
+		<div id = "logo">
+			<a href="#">
+				<div id ="main_logo">
+					<span class = "logo_span">화 개 장 터 ★</span>
+				</div>	
+			</a>
+		</div>
+	</div>
+	</header>
+	<div id = "main_container">
+		<div id ="join_mass">
+			<span>R U JOIN US <img src="img/realfoot.JPG" width = "40px" height = "40px;"></span>
+		</div>
+	
+			<form action="AddEmp" name="FormEmp" method="post" onSubmit="return checked()" onReset="clearForm()">
+				<div id ="input_id">
+						<label  for="add1"> 아이디 </label>
+						<input id = "id_in" type="text" id="add1" name="empid" size ="50" maxlength="15" placeholder="ID"><span id ="id_error"></span>
+						<br>
+						<label for="add2"> 비밀번호 </label>
+						<input type="password" id="add2" name="emppw" size ="50" maxlength="15" placeholder="Pw">
+						<br>
+						<label  for="add3"> 비밀번호 확인 </label>
+						<input id = "pw_ch" type="text" id="add3" name="emppwchek" size ="50" maxlength="15" placeholder="PwCheck"><span id ="pw_error"></span>
+						<br>
+				</div>
+				<div id = "input_user">
+						<label for="add4"> 이름 </label>
+						<input type="text" id="add4" name="empname" size ="50" maxlength="15" placeholder="Name">
+						<br>
+						<label for="add5"> 휴대폰 번호 </label>
+						<input type="password" id="add5" name="empphone" size ="50" maxlength="25" placeholder="Phone">
+						<br>
+						<label for="add6"> email </label>
+						<input type="text" id="add6" name="empmail" size ="50" maxlength="28" placeholder="Email">
+				</div>
+				<div id = "input_button">
+						<input type="submit" value="가입하기">
+				</div>
+		</form>
+		
+		<footer>
+			<div id="footer">
+				<ul>
+					<li><a href="#">이용약관</a></li>
+					<li><a href="#">개인정보 처리방법</a></li>
+					<li><a href="#">운영정책</a></li>
+					<li><a href="#">공지사항</a></li>
+				</ul>
+			</div>	
+		</footer>
+		
+</div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>여행정보 검색 포털 화개장터</title>
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link href="css/JoinMember.css" rel="stylesheet" >
+
+<!-- 부가적인 테마 -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"> -->
+
+
+	<style type="text/css">
+		
+	</style>
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="js/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		var mainImg = $("#main_img");
+		var temp = "0";
+		mainImg.click(function(){
+			if(temp == "0"){
+				mainImg.attr("src","img/whitecity.jpg");
+				temp ="1";
+			}else if(temp == "1"){
+				mainImg.attr("src","img/sea.jpg");
+				temp = "2";
+			}else if(temp == "2"){
+				mainImg.attr("src","img/city.png");
+				temp = "0";
+			}
+		});
+		
+		
+		
+		
+		
+		
+	});
+
+</script>
+</head>
+<body>
+	<div id = "header">
+		<span id ="bookmark">BOOKMARK + </span>
+	
+		<!--로그인 , 회원가입 등등 div-->
+		<div id = "header_inner">
+			<ul id = "header_ul">
+				<li class = "header_li"><a href = "#" class = "header_a">로그인</a></li>
+				<li class = "header_li"><a href = "#" class = "header_a">회원가입</a></li>
+				<li class = "header_li"><a href = "#" class = "header_a">마이페이지▽</a>
+					<div class = "header_dropdown">
+						<a class = "dropdown_a" href="#">내정보</a>
+						<a class = "dropdown_a" href="#">장바구니</a>
+						<a class = "dropdown_a" href="#">주문/배송 조회</a>
+						<a class = "dropdown_a" href="#">위시리스트</a>
+						<a class = "dropdown_a" href="#">쿠폰조회</a>
+					</div>
+				</li>
+				<li class = "header_li"><a href = "#" class = "header_a">고객센터</a></li>
+			</ul>
+			</div>
+	</div>
+
+	<!-- 메인 로고 -->
+	<div id = "logo">
+		<a href="#">
+			<div id ="main_logo">
+				<span class = "logo_span">화 개 장 터 ★</span>
+			</div>	
+		</a>
+	</div>
+
+	<!-- 네비 -->
+	<div id="nav">
+		<ul id="nav_ul">
+			<li class="nav_li"><a class = "nav_a" href="#">여행지</a>
+				<div class ="nav_dropdown">
+					<a href="#" class ="nav_dropdown_a">서울/경기</a>
+					<a href="#" class ="nav_dropdown_a">충북/충남</a>
+					<a href="#" class ="nav_dropdown_a">강원</a>
+					<a href="#" class ="nav_dropdown_a">전북/전남</a>
+					<a href="#" class ="nav_dropdown_a">경북/경남</a>				
+				</div>
+			</li>
+			<li class="nav_li"><a class = "nav_a" href="#">축제</a>
+				<div class ="nav_dropdown">
+					<a href="#" class ="nav_dropdown_a">서울/경기</a>
+					<a href="#" class ="nav_dropdown_a">충북/충남</a>
+					<a href="#" class ="nav_dropdown_a">강원</a>
+					<a href="#" class ="nav_dropdown_a">전북/전남</a>
+					<a href="#" class ="nav_dropdown_a">경북/경남</a>			
+				</div>
+			</li>
+			<li class="nav_li"><a class = "nav_a" href="#">머물자리</a>
+				<div class ="nav_dropdown">
+					<a href="#" class ="nav_dropdown_a">대가족 펜션</a>
+					<a href="#" class ="nav_dropdown_a">소가족 펜션</a>
+					<a href="#" class ="nav_dropdown_a">복층 펜션</a>	
+					<a href="#" class ="nav_dropdown_a">게스트 하우스</a>				
+				</div>
+			</li>
+			<li class="nav_li"><a class = "nav_a" href="#">기념/특산품</a>
+				<div class ="nav_dropdown">
+					<a href="#" class ="nav_dropdown_a">기념품</a>
+					<a href="#" class ="nav_dropdown_a">특산품</a>
+				</div>
+			</li>
+			<li class="nav_li"><a class = "nav_a" href="#">추천코스</a>
+				<div class ="nav_dropdown">
+					<a href="#" class ="nav_dropdown_a">가족</a>
+					<a href="#" class ="nav_dropdown_a">효도</a>
+					<a href="#" class ="nav_dropdown_a">베낭여행</a>
+					<a href="#" class ="nav_dropdown_a">커플</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+	
+	<div id ="img_section">
+		<img src="img/city.png" alt ="메인이미지"  id = "main_img" height ="600" width = "100%" >
+	</div>
+		<div id ="button_div">
+			<span class="prev"><a href="#"><img src="img/prev_button.png" alt="이전" width = "20"  height="20"></a></span>
+
+			<span class="next"><a href="#"><img src="img/next_button.JPG" alt="다음" width = "20"  height="20"></a></span>
+		</div>
+	
+
+
+</body>
+</html>
