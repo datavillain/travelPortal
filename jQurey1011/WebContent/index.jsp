@@ -213,7 +213,8 @@
 	
 	<div class = "item_list">
 		<div class = "product_name">
-		<h3>커플여행</h3>
+		<h3>커플여행지옥 솔로여행 천국</h3>
+		*^^* 화이팅 입니다!!! 아자아자 간바레~~!!
 		</div>
 			<div class = "img_box">
 			<c:forEach items="${placeList}" var ="bpDto">		
